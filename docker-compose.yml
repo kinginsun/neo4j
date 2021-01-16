@@ -1,0 +1,21 @@
+version: '2.2'
+
+# 需要定时运行的目录，映射到 /jobby/code 中
+services:
+    neo4j:
+        image: neo4j:latest
+        user: "neo4j:neo4j"
+        container_name: neo4j
+        ports:
+            - "7474:7474"
+            - "7687:7687"
+        restart: always
+        volumes:
+            - ./data:/data
+        #environment:
+            #- NEO4J_AUTH=none
+        networks:
+            - code-network
+networks:
+    code-network:
+        driver: bridge
