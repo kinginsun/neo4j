@@ -12,6 +12,7 @@ services:
         restart: always
         volumes:
             - ./data:/data
+            - ./conf:/var/lib/neo4j/conf
         #environment:
             #- NEO4J_AUTH=none
         networks:
