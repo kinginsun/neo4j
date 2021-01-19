@@ -22,6 +22,6 @@ echo "updating hk2api"
 if [ "$M" == 'REBUILD' ];then
   ssh ubuntu@hk.xanda.hk 'cd ~/neo4j && git pull && ./run.sh down && ./run.sh exit'
 else
-  ssh ubuntu@hk.xanda.hk 'cd ~/neo4j && ./run.sh down && sudo chown ubuntu:ubuntu -R conf && git pull && sudo chown 7474:7474 -R conf && ./run.sh exit'
+  ssh ubuntu@hk.xanda.hk 'cd ~/neo4j && ./run.sh down && git pull && ./run.sh exit'
 fi
 echo "=========================   DONE   ========================="
