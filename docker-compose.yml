@@ -14,8 +14,8 @@ services:
             - ./data:/data
             - ./conf:/var/lib/neo4j/conf
             - ./csv:/var/lib/neo4j/import
-        #environment:
-            #- NEO4J_AUTH=none
+        environment:
+            - NEO4J_AUTH=none
         networks:
             - code-network
 networks:
